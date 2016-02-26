@@ -70,6 +70,9 @@ typedef struct _Input
     NSArray *toStoreArray = historyArray;
     [[NSUserDefaults standardUserDefaults] setObject:toStoreArray forKey:@"HISTORY"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:_webview.request.URL.absoluteString forKey:@"homepage"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 -(void)viewDidAppear:(BOOL)animated {
     loadingSpinner.center = CGPointMake(CGRectGetMidX([UIScreen mainScreen].bounds), CGRectGetMidY([UIScreen mainScreen].bounds));
