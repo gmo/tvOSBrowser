@@ -73,6 +73,8 @@ typedef struct _Input
     
     [[NSUserDefaults standardUserDefaults] setObject:_webview.request.URL.absoluteString forKey:@"homepage"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [self hideCursor];
 }
 -(void)viewDidAppear:(BOOL)animated {
     loadingSpinner.center = CGPointMake(CGRectGetMidX([UIScreen mainScreen].bounds), CGRectGetMidY([UIScreen mainScreen].bounds));
@@ -89,6 +91,8 @@ typedef struct _Input
         [self showHintsAlert];
     }
     _displayedHintsOnLaunch = YES;
+    
+    [self hideCursor];
 }
 -(void)loadHomePage {
     if ([[NSUserDefaults standardUserDefaults] stringForKey:@"homepage"] != nil) {
@@ -660,6 +664,13 @@ typedef struct _Input
         self.webview.userInteractionEnabled = YES;
         cursorView.hidden = YES;
     }
+}
+-(void)hideCursor
+{
+    self.webview.scrollView.scrollEnabled = YES;
+    self.webview.userInteractionEnabled = YES;
+    cursorView.hidden = YES;
+    self.cursorMode = false;
 }
 - (void)showHintsAlert
 {
