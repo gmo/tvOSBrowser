@@ -45,6 +45,7 @@
         [self addToFavorites: @"Discipleship Counters": @"?fast"];
         [self addToFavorites: @"Comments": @"http://www.greatcommission2020.com/comments?fast"];
         [self addToFavorites: @"Dashboard": @"http://www.greatcommission2020.com/dashboard?fast"];
+        [self addToFavorites: @"Nagios": @"http://www.greatcommission2020.com/nagios?fast"];
     }
     
 	return YES;
