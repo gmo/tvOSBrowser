@@ -37,7 +37,29 @@
             [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
         }
     }
+    
+    if ([[NSUserDefaults standardUserDefaults] arrayForKey:@"FAVORITES"] == nil) {
+        [self addToFavorites: @"Visuals": @"http://www.greatcommission2020.com/visuals"];
+        [self addToFavorites: @"Map": @"http://greatcommission2020.com/map/fullscreen?fast&terrain=false"];
+        [self addToFavorites: @"All Time Counters": @"http://www.greatcommission2020.com/counters/alltime?fast"];
+        [self addToFavorites: @"Discipleship Counters": @"?fast"];
+        [self addToFavorites: @"Comments": @"http://www.greatcommission2020.com/comments?fast"];
+        [self addToFavorites: @"Dashboard": @"http://www.greatcommission2020.com/dashboard?fast"];
+    }
+    
 	return YES;
+}
+
+- (void)addToFavorites:(NSString *)theTitle :(NSString *)currentURL {
+    NSArray *toSaveItem = [NSArray arrayWithObjects:currentURL, theTitle, nil];
+    NSMutableArray *historyArray = [NSMutableArray arrayWithObjects:toSaveItem, nil];
+    if ([[NSUserDefaults standardUserDefaults] arrayForKey:@"FAVORITES"] != nil) {
+        historyArray = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"FAVORITES"] mutableCopy];
+        [historyArray addObject:toSaveItem];
+    }
+    NSArray *toStoreArray = historyArray;
+    [[NSUserDefaults standardUserDefaults] setObject:toStoreArray forKey:@"FAVORITES"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
