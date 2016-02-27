@@ -42,7 +42,7 @@
         [self addToFavorites: @"Visuals": @"http://www.greatcommission2020.com/visuals"];
         [self addToFavorites: @"Map": @"http://greatcommission2020.com/map/fullscreen?fast&terrain=false"];
         [self addToFavorites: @"All Time Counters": @"http://www.greatcommission2020.com/counters/alltime?fast"];
-        [self addToFavorites: @"Discipleship Counters": @"?fast"];
+        [self addToFavorites: @"Discipleship Counters": @"http://greatcommission2020.com/counters/discipleship?fast"];
         [self addToFavorites: @"Comments": @"http://www.greatcommission2020.com/comments?fast"];
         [self addToFavorites: @"Dashboard": @"http://www.greatcommission2020.com/dashboard?fast"];
         [self addToFavorites: @"Nagios": @"http://www.greatcommission2020.com/nagios?fast"];
