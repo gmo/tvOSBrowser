@@ -115,7 +115,7 @@
 				TargetAttributes = {
 					B002B8611BAE420500C744AF = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = WM52ZAXD7T;
+						DevelopmentTeam = 9A2Y5B6858;
 					};
 				};
 			};
@@ -282,7 +282,7 @@
 				FRAMEWORK_SEARCH_PATHS = "/System/Library/PrivateFrameworks/**";
 				INFOPLIST_FILE = Browser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gmo.appletv.browser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmo.appletv.kiosk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -300,7 +300,7 @@
 				FRAMEWORK_SEARCH_PATHS = "/System/Library/PrivateFrameworks/**";
 				INFOPLIST_FILE = Browser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gmo.appletv.browser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmo.appletv.kiosk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
